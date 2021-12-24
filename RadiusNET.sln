@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTest", "ClientTest\ClientTest.csproj", "{A933996D-C243-4C21-A3DC-EFDB68170A58}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiusClient", "ClientTest\RadiusClient.csproj", "{A933996D-C243-4C21-A3DC-EFDB68170A58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radius", "Radius\Radius.csproj", "{32CDF850-80D2-45AA-9292-66CA43CDCBC7}"
 EndProject
@@ -22,6 +24,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E69AFA49-3A96-4FE2-8E62-4F9ECE6017FD}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		version = 0.4

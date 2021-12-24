@@ -1,3 +1,69 @@
+
+My Fork of Radius Client
+========================
+
+Output of project: RadiusClient.exe
+
+Usage : RadiusClient.exe hostname sharedsecret username password
+Example: RadiusClient.exe 127.0.0.1 test Shahid P@ssw0rd
+
+
+Load Test a Radius Server
+==========================
+
+### Note: below uses atleast powershell core 7.3 (preview or later for: ForEach -Parallel support)
+
+### Example1:
+Create 200 Requests, throwing 100 Requests at a time
+
+Code:
+
+1..200 | ForEach-Object -Parallel { 
+
+ .\RadiusClient.exe 127.0.0.1 test skhan P@ssw0rd  
+
+}
+-ThrottleLimit 100
+
+
+
+### Example1:
+Create 1000 Requests, throwing 3 Requests at a time
+
+Code:
+
+1..1000 | ForEach-Object -Parallel { 
+
+ .\RadiusClient.exe 127.0.0.1 test skhan P@ssw0rd  
+
+}
+-ThrottleLimit 3
+
+
+
+### Example3
+More Complex bombardment
+
+1..200 | ForEach-Object -Parallel { 
+1..100 | ForEach-Object  {
+ .\RadiusClient.exe 127.0.0.1 test skhan P@ssw0rd  
+Sleep -milliseconds 50 
+}
+Sleep -milliseconds 50
+ } -ThrottleLimit 100
+
+
+
+## Note: Release contains binary downloadable version
+Preqreqs: .net 4.8 Fx
+
+
+
+
+
+Original Readme
+===============
+
 Overview
 ========
 

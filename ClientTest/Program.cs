@@ -27,11 +27,14 @@ namespace ClientTest
 			}
 			catch (Exception e)
 			{
+				Console.WriteLine("Exception: ");
+				Console.WriteLine("-----------------------------------------------------------------------------------------------");
 				Console.WriteLine(e);
+				Console.WriteLine("-----------------------------------------------------------------------------------------------");
 			}
 
-			Console.WriteLine("Press any key to exit...");
-			Console.ReadLine();
+			//Console.WriteLine("Press any key to exit...");
+			//Console.ReadLine();
 		}
 
 		private async static Task Authenticate(string[] args)
